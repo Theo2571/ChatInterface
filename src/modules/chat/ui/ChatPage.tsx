@@ -22,8 +22,6 @@ export function ChatPage() {
     setInput('');
     setAutoScroll(true);
 
-    // Явный скролл вниз после отправки сообщения пользователя,
-    // чтобы автоскролл сработал сразу, даже если до этого пользователь листал историю.
     requestAnimationFrame(() => {
       if (!scrollRef.current) return;
       const el = scrollRef.current;
